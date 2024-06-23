@@ -62,6 +62,10 @@ function getData() {
 
 inputEl.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
+        if(inputEl.value === "") {
+            alert("Enter some text");
+            return;
+        }        
         containerEl.textContent = "";
         getData();
     }
